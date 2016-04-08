@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0787DA5E9C343242761B9E6 /* libPods-PerspectiveCorrection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA9E8E9C4811A1261ADD19A /* libPods-PerspectiveCorrection.a */; };
+		CF0E3D1C1CB65F260085E1D4 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF0E3D171CB65F260085E1D4 /* UIImage+OpenCV.mm */; };
+		CF0E3D1D1CB65F260085E1D4 /* UIImage+PerspectiveTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF0E3D191CB65F260085E1D4 /* UIImage+PerspectiveTransform.mm */; };
+		CFCEDDD21C99384C00E4C1D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCEDDD11C99384C00E4C1D9 /* main.m */; };
+		CFCEDDD51C99384C00E4C1D9 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFCEDDD41C99384C00E4C1D9 /* AppDelegate.mm */; };
+		CFCEDDD81C99384C00E4C1D9 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFCEDDD71C99384C00E4C1D9 /* ViewController.mm */; };
+		CFCEDDDB1C99384C00E4C1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCEDDD91C99384C00E4C1D9 /* Main.storyboard */; };
+		CFCEDDDD1C99384C00E4C1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCEDDDC1C99384C00E4C1D9 /* Assets.xcassets */; };
+		CFCEDDE01C99384C00E4C1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCEDDDE1C99384C00E4C1D9 /* LaunchScreen.storyboard */; };
+		CFCEDDEB1C99384C00E4C1D9 /* PerspectiveCorrectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCEDDEA1C99384C00E4C1D9 /* PerspectiveCorrectionTests.m */; };
+		CFCEDDF61C99384C00E4C1D9 /* PerspectiveCorrectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCEDDF51C99384C00E4C1D9 /* PerspectiveCorrectionUITests.m */; };
+		CFCEDE0F1C994F3300E4C1D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCEDE0E1C994F3300E4C1D9 /* Foundation.framework */; };
+		CFCEDE111C994F4A00E4C1D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCEDE101C994F4A00E4C1D9 /* UIKit.framework */; };
+		CFCEDE151C9956A300E4C1D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCEDE141C9956A300E4C1D9 /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFCEDDE71C99384C00E4C1D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFCEDDC51C99384C00E4C1D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFCEDDCC1C99384C00E4C1D9;
+			remoteInfo = PerspectiveCorrection;
+		};
+		CFCEDDF21C99384C00E4C1D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFCEDDC51C99384C00E4C1D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFCEDDCC1C99384C00E4C1D9;
+			remoteInfo = PerspectiveCorrection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2077A0B4E29EFB4679364F30 /* Pods-PerspectiveCorrection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerspectiveCorrection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PerspectiveCorrection/Pods-PerspectiveCorrection.debug.xcconfig"; sourceTree = "<group>"; };
+		3C09A01D702E2A580633FC81 /* Pods-PerspectiveCorrection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerspectiveCorrection.release.xcconfig"; path = "Pods/Target Support Files/Pods-PerspectiveCorrection/Pods-PerspectiveCorrection.release.xcconfig"; sourceTree = "<group>"; };
+		9BA9E8E9C4811A1261ADD19A /* libPods-PerspectiveCorrection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerspectiveCorrection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0E3D161CB65F260085E1D4 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		CF0E3D171CB65F260085E1D4 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		CF0E3D181CB65F260085E1D4 /* UIImage+PerspectiveTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PerspectiveTransform.h"; sourceTree = "<group>"; };
+		CF0E3D191CB65F260085E1D4 /* UIImage+PerspectiveTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+PerspectiveTransform.mm"; sourceTree = "<group>"; };
+		CFCEDDCD1C99384C00E4C1D9 /* PerspectiveCorrection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerspectiveCorrection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFCEDDD11C99384C00E4C1D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CFCEDDD31C99384C00E4C1D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CFCEDDD41C99384C00E4C1D9 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		CFCEDDD61C99384C00E4C1D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CFCEDDD71C99384C00E4C1D9 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		CFCEDDDA1C99384C00E4C1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFCEDDDC1C99384C00E4C1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFCEDDDF1C99384C00E4C1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFCEDDE11C99384C00E4C1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCEDDE61C99384C00E4C1D9 /* PerspectiveCorrectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerspectiveCorrectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFCEDDEA1C99384C00E4C1D9 /* PerspectiveCorrectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerspectiveCorrectionTests.m; sourceTree = "<group>"; };
+		CFCEDDEC1C99384C00E4C1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCEDDF11C99384C00E4C1D9 /* PerspectiveCorrectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerspectiveCorrectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFCEDDF51C99384C00E4C1D9 /* PerspectiveCorrectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerspectiveCorrectionUITests.m; sourceTree = "<group>"; };
+		CFCEDDF71C99384C00E4C1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCEDE0E1C994F3300E4C1D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CFCEDE101C994F4A00E4C1D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CFCEDE141C9956A300E4C1D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFCEDDCA1C99384C00E4C1D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFCEDE151C9956A300E4C1D9 /* CoreGraphics.framework in Frameworks */,
+				CFCEDE111C994F4A00E4C1D9 /* UIKit.framework in Frameworks */,
+				CFCEDE0F1C994F3300E4C1D9 /* Foundation.framework in Frameworks */,
+				A0787DA5E9C343242761B9E6 /* libPods-PerspectiveCorrection.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFCEDDE31C99384C00E4C1D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFCEDDEE1C99384C00E4C1D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0E3D121CB65F260085E1D4 /* PerspectiveTransform */ = {
+			isa = PBXGroup;
+			children = (
+				CF0E3D161CB65F260085E1D4 /* UIImage+OpenCV.h */,
+				CF0E3D171CB65F260085E1D4 /* UIImage+OpenCV.mm */,
+				CF0E3D181CB65F260085E1D4 /* UIImage+PerspectiveTransform.h */,
+				CF0E3D191CB65F260085E1D4 /* UIImage+PerspectiveTransform.mm */,
+			);
+			path = PerspectiveTransform;
+			sourceTree = "<group>";
+		};
+		CFCEDDC41C99384C00E4C1D9 = {
+			isa = PBXGroup;
+			children = (
+				CFCEDE0D1C994EF800E4C1D9 /* Frameworks */,
+				CFCEDDCF1C99384C00E4C1D9 /* PerspectiveCorrection */,
+				CFCEDDE91C99384C00E4C1D9 /* PerspectiveCorrectionTests */,
+				CFCEDDF41C99384C00E4C1D9 /* PerspectiveCorrectionUITests */,
+				CFCEDDCE1C99384C00E4C1D9 /* Products */,
+				E14FFDCA96C0AE910F14B5B5 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CFCEDDCE1C99384C00E4C1D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFCEDDCD1C99384C00E4C1D9 /* PerspectiveCorrection.app */,
+				CFCEDDE61C99384C00E4C1D9 /* PerspectiveCorrectionTests.xctest */,
+				CFCEDDF11C99384C00E4C1D9 /* PerspectiveCorrectionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFCEDDCF1C99384C00E4C1D9 /* PerspectiveCorrection */ = {
+			isa = PBXGroup;
+			children = (
+				CF0E3D121CB65F260085E1D4 /* PerspectiveTransform */,
+				CFCEDDD31C99384C00E4C1D9 /* AppDelegate.h */,
+				CFCEDDD41C99384C00E4C1D9 /* AppDelegate.mm */,
+				CFCEDDD61C99384C00E4C1D9 /* ViewController.h */,
+				CFCEDDD71C99384C00E4C1D9 /* ViewController.mm */,
+				CFCEDDD91C99384C00E4C1D9 /* Main.storyboard */,
+				CFCEDDDC1C99384C00E4C1D9 /* Assets.xcassets */,
+				CFCEDDDE1C99384C00E4C1D9 /* LaunchScreen.storyboard */,
+				CFCEDDE11C99384C00E4C1D9 /* Info.plist */,
+				CFCEDDD01C99384C00E4C1D9 /* Supporting Files */,
+			);
+			path = PerspectiveCorrection;
+			sourceTree = "<group>";
+		};
+		CFCEDDD01C99384C00E4C1D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFCEDDD11C99384C00E4C1D9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFCEDDE91C99384C00E4C1D9 /* PerspectiveCorrectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFCEDDEA1C99384C00E4C1D9 /* PerspectiveCorrectionTests.m */,
+				CFCEDDEC1C99384C00E4C1D9 /* Info.plist */,
+			);
+			path = PerspectiveCorrectionTests;
+			sourceTree = "<group>";
+		};
+		CFCEDDF41C99384C00E4C1D9 /* PerspectiveCorrectionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFCEDDF51C99384C00E4C1D9 /* PerspectiveCorrectionUITests.m */,
+				CFCEDDF71C99384C00E4C1D9 /* Info.plist */,
+			);
+			path = PerspectiveCorrectionUITests;
+			sourceTree = "<group>";
+		};
+		CFCEDE0D1C994EF800E4C1D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFCEDE141C9956A300E4C1D9 /* CoreGraphics.framework */,
+				CFCEDE101C994F4A00E4C1D9 /* UIKit.framework */,
+				CFCEDE0E1C994F3300E4C1D9 /* Foundation.framework */,
+				9BA9E8E9C4811A1261ADD19A /* libPods-PerspectiveCorrection.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E14FFDCA96C0AE910F14B5B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2077A0B4E29EFB4679364F30 /* Pods-PerspectiveCorrection.debug.xcconfig */,
+				3C09A01D702E2A580633FC81 /* Pods-PerspectiveCorrection.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFCEDDCC1C99384C00E4C1D9 /* PerspectiveCorrection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFCEDDFA1C99384C00E4C1D9 /* Build configuration list for PBXNativeTarget "PerspectiveCorrection" */;
+			buildPhases = (
+				108CF68B91091395139CD3A0 /* Check Pods Manifest.lock */,
+				CFCEDDC91C99384C00E4C1D9 /* Sources */,
+				CFCEDDCA1C99384C00E4C1D9 /* Frameworks */,
+				CFCEDDCB1C99384C00E4C1D9 /* Resources */,
+				B0F5E58E6A1A4B0289A8159C /* Embed Pods Frameworks */,
+				3FE47BE3FD56E303C105A96A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerspectiveCorrection;
+			productName = PerspectiveCorrection;
+			productReference = CFCEDDCD1C99384C00E4C1D9 /* PerspectiveCorrection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFCEDDE51C99384C00E4C1D9 /* PerspectiveCorrectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFCEDDFD1C99384C00E4C1D9 /* Build configuration list for PBXNativeTarget "PerspectiveCorrectionTests" */;
+			buildPhases = (
+				CFCEDDE21C99384C00E4C1D9 /* Sources */,
+				CFCEDDE31C99384C00E4C1D9 /* Frameworks */,
+				CFCEDDE41C99384C00E4C1D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFCEDDE81C99384C00E4C1D9 /* PBXTargetDependency */,
+			);
+			name = PerspectiveCorrectionTests;
+			productName = PerspectiveCorrectionTests;
+			productReference = CFCEDDE61C99384C00E4C1D9 /* PerspectiveCorrectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFCEDDF01C99384C00E4C1D9 /* PerspectiveCorrectionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFCEDE001C99384C00E4C1D9 /* Build configuration list for PBXNativeTarget "PerspectiveCorrectionUITests" */;
+			buildPhases = (
+				CFCEDDED1C99384C00E4C1D9 /* Sources */,
+				CFCEDDEE1C99384C00E4C1D9 /* Frameworks */,
+				CFCEDDEF1C99384C00E4C1D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFCEDDF31C99384C00E4C1D9 /* PBXTargetDependency */,
+			);
+			name = PerspectiveCorrectionUITests;
+			productName = PerspectiveCorrectionUITests;
+			productReference = CFCEDDF11C99384C00E4C1D9 /* PerspectiveCorrectionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFCEDDC51C99384C00E4C1D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = liulibo;
+				TargetAttributes = {
+					CFCEDDCC1C99384C00E4C1D9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = W9SK438UT6;
+					};
+					CFCEDDE51C99384C00E4C1D9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = W9SK438UT6;
+						TestTargetID = CFCEDDCC1C99384C00E4C1D9;
+					};
+					CFCEDDF01C99384C00E4C1D9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = W9SK438UT6;
+						TestTargetID = CFCEDDCC1C99384C00E4C1D9;
+					};
+				};
+			};
+			buildConfigurationList = CFCEDDC81C99384C00E4C1D9 /* Build configuration list for PBXProject "PerspectiveCorrection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFCEDDC41C99384C00E4C1D9;
+			productRefGroup = CFCEDDCE1C99384C00E4C1D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFCEDDCC1C99384C00E4C1D9 /* PerspectiveCorrection */,
+				CFCEDDE51C99384C00E4C1D9 /* PerspectiveCorrectionTests */,
+				CFCEDDF01C99384C00E4C1D9 /* PerspectiveCorrectionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFCEDDCB1C99384C00E4C1D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFCEDDE01C99384C00E4C1D9 /* LaunchScreen.storyboard in Resources */,
+				CFCEDDDD1C99384C00E4C1D9 /* Assets.xcassets in Resources */,
+				CFCEDDDB1C99384C00E4C1D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFCEDDE41C99384C00E4C1D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFCEDDEF1C99384C00E4C1D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		108CF68B91091395139CD3A0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3FE47BE3FD56E303C105A96A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerspectiveCorrection/Pods-PerspectiveCorrection-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0F5E58E6A1A4B0289A8159C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PerspectiveCorrection/Pods-PerspectiveCorrection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFCEDDC91C99384C00E4C1D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFCEDDD81C99384C00E4C1D9 /* ViewController.mm in Sources */,
+				CFCEDDD51C99384C00E4C1D9 /* AppDelegate.mm in Sources */,
+				CFCEDDD21C99384C00E4C1D9 /* main.m in Sources */,
+				CF0E3D1C1CB65F260085E1D4 /* UIImage+OpenCV.mm in Sources */,
+				CF0E3D1D1CB65F260085E1D4 /* UIImage+PerspectiveTransform.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFCEDDE21C99384C00E4C1D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFCEDDEB1C99384C00E4C1D9 /* PerspectiveCorrectionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFCEDDED1C99384C00E4C1D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFCEDDF61C99384C00E4C1D9 /* PerspectiveCorrectionUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFCEDDE81C99384C00E4C1D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFCEDDCC1C99384C00E4C1D9 /* PerspectiveCorrection */;
+			targetProxy = CFCEDDE71C99384C00E4C1D9 /* PBXContainerItemProxy */;
+		};
+		CFCEDDF31C99384C00E4C1D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFCEDDCC1C99384C00E4C1D9 /* PerspectiveCorrection */;
+			targetProxy = CFCEDDF21C99384C00E4C1D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFCEDDD91C99384C00E4C1D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFCEDDDA1C99384C00E4C1D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFCEDDDE1C99384C00E4C1D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFCEDDDF1C99384C00E4C1D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFCEDDF81C99384C00E4C1D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFCEDDF91C99384C00E4C1D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFCEDDFB1C99384C00E4C1D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2077A0B4E29EFB4679364F30 /* Pods-PerspectiveCorrection.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PerspectiveCorrection",
+					"$(PROJECT_DIR)/PerspectiveCorrection/PerspectiveTransform",
+				);
+				GCC_INPUT_FILETYPE = automatic;
+				INFOPLIST_FILE = PerspectiveCorrection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = llb.PerspectiveCorrection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CFCEDDFC1C99384C00E4C1D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C09A01D702E2A580633FC81 /* Pods-PerspectiveCorrection.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PerspectiveCorrection",
+					"$(PROJECT_DIR)/PerspectiveCorrection/PerspectiveTransform",
+				);
+				GCC_INPUT_FILETYPE = automatic;
+				INFOPLIST_FILE = PerspectiveCorrection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = llb.PerspectiveCorrection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CFCEDDFE1C99384C00E4C1D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PerspectiveCorrectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llb.PerspectiveCorrectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerspectiveCorrection.app/PerspectiveCorrection";
+			};
+			name = Debug;
+		};
+		CFCEDDFF1C99384C00E4C1D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PerspectiveCorrectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llb.PerspectiveCorrectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerspectiveCorrection.app/PerspectiveCorrection";
+			};
+			name = Release;
+		};
+		CFCEDE011C99384C00E4C1D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PerspectiveCorrectionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llb.PerspectiveCorrectionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PerspectiveCorrection;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CFCEDE021C99384C00E4C1D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PerspectiveCorrectionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = llb.PerspectiveCorrectionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PerspectiveCorrection;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFCEDDC81C99384C00E4C1D9 /* Build configuration list for PBXProject "PerspectiveCorrection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFCEDDF81C99384C00E4C1D9 /* Debug */,
+				CFCEDDF91C99384C00E4C1D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFCEDDFA1C99384C00E4C1D9 /* Build configuration list for PBXNativeTarget "PerspectiveCorrection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFCEDDFB1C99384C00E4C1D9 /* Debug */,
+				CFCEDDFC1C99384C00E4C1D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFCEDDFD1C99384C00E4C1D9 /* Build configuration list for PBXNativeTarget "PerspectiveCorrectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFCEDDFE1C99384C00E4C1D9 /* Debug */,
+				CFCEDDFF1C99384C00E4C1D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFCEDE001C99384C00E4C1D9 /* Build configuration list for PBXNativeTarget "PerspectiveCorrectionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFCEDE011C99384C00E4C1D9 /* Debug */,
+				CFCEDE021C99384C00E4C1D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFCEDDC51C99384C00E4C1D9 /* Project object */;
+}
