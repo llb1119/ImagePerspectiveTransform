@@ -9,7 +9,7 @@
 #endif
 #import "UIImage+OpenCV.h"
 #import "UIImage+PerspectiveTransform.h"
-//#define _DRAW_LINE_
+#define _DRAW_LINE_
 const SquarePoint SquarePointZero = {.p0 = 0, .p1 = 0, .p2 = 0, .p3 = 0};
 using namespace cv;
 using namespace std;
@@ -29,9 +29,6 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
     Mat quadImg = Mat::zeros(self.size.width, self.size.height, CV_8UC3);
     vector<vector<cv::Point>> squares;
     findSquares(matImage, squares);
-#ifdef _DRAW_LINE_
-    drawSquares(matImage, squares);
-#endif
     // const cv::Point *p = &squares[0][0];
 
     // Corners of the destination image
@@ -41,6 +38,9 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
     quad_pts.push_back(cv::Point2f(quadImg.cols, quadImg.rows));
     quad_pts.push_back(cv::Point2f(0, quadImg.rows));
 
+    if (squares.size() <= 0) {
+        return nil;
+    }
     vector<cv::Point2f> corners;
     corners.push_back(squares[0][0]);
     corners.push_back(squares[0][3]);
@@ -53,6 +53,7 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
     cv::warpPerspective(matImage, quadImg, transmtx, quadImg.size());
     dstImage = [UIImage imageWithCVMat:quadImg];
 #else
+    drawSquares(matImage, squares);
     dstImage = [UIImage imageWithCVMat:matImage];
 #endif
     return dstImage;
