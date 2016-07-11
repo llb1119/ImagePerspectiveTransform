@@ -20,7 +20,7 @@
     [self showPic];
 }
 - (void)showPic {
-    UIImage *srcImage = [UIImage imageNamed:@"business_card1"];
+    UIImage *srcImage = [UIImage imageNamed:@"business_card"];
     self.srcImageView.image = srcImage;
     self.srcImageView.contentMode = UIViewContentModeScaleToFill;
     UIImage *dstImage = [srcImage getTransformImage];

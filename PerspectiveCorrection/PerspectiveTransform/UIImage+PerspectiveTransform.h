@@ -20,6 +20,14 @@ typedef struct SquarePoint {
  */
 - (UIImage *)getTransformImage;
 /**
+ *  get perspective transformed image
+ *
+ *  @param square
+ *
+ *  @return image
+ */
+- (UIImage *)getTransformImageWithSquare:(SquarePoint)square;
+/**
  *  get square points
  *
  *  @return SquarePoint

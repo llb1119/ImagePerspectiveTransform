@@ -9,7 +9,7 @@
 #endif
 #import "UIImage+OpenCV.h"
 #import "UIImage+PerspectiveTransform.h"
-#define _DRAW_LINE_
+//#define _DRAW_LINE_
 const SquarePoint SquarePointZero = {.p0 = 0, .p1 = 0, .p2 = 0, .p3 = 0};
 using namespace cv;
 using namespace std;
@@ -24,12 +24,20 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
  *  @return image
  */
 - (UIImage *)getTransformImage {
+    SquarePoint square = [self getSquare];
+    return [self getTransformImageWithSquare:square];
+}
+/**
+ *  get perspective transformed image
+ *
+ *  @param square
+ *
+ *  @return image
+ */
+- (UIImage *)getTransformImageWithSquare:(SquarePoint)square {
     UIImage *dstImage = nil;
     Mat matImage = self.CVMat;
     Mat quadImg = Mat::zeros(self.size.width, self.size.height, CV_8UC3);
-    vector<vector<cv::Point>> squares;
-    findSquares(matImage, squares);
-    // const cv::Point *p = &squares[0][0];
 
     // Corners of the destination image
     vector<cv::Point2f> quad_pts;
@@ -38,14 +46,11 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
     quad_pts.push_back(cv::Point2f(quadImg.cols, quadImg.rows));
     quad_pts.push_back(cv::Point2f(0, quadImg.rows));
 
-    if (squares.size() <= 0) {
-        return nil;
-    }
     vector<cv::Point2f> corners;
-    corners.push_back(squares[0][0]);
-    corners.push_back(squares[0][3]);
-    corners.push_back(squares[0][2]);
-    corners.push_back(squares[0][1]);
+    corners.push_back(cv::Point(square.p0.x, square.p0.y));
+    corners.push_back(cv::Point(square.p1.x, square.p1.y));
+    corners.push_back(cv::Point(square.p2.x, square.p2.y));
+    corners.push_back(cv::Point(square.p3.x, square.p3.y));
 #ifndef _DRAW_LINE_
     // Get transformation matrix
     cv::Mat transmtx = cv::getPerspectiveTransform(corners, quad_pts);
