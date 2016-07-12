@@ -28,9 +28,11 @@ typedef struct SquarePoint {
  */
 - (UIImage *)getTransformImageWithSquare:(SquarePoint)square;
 /**
- *  get square points
+ *  get square in the image
  *
- *  @return SquarePoint
+ *  @param square
+ *
+ *  @return true:sucess false:not find square
  */
-- (SquarePoint)getSquare;
+- (bool)getSquare:(SquarePoint *)square;
 @end

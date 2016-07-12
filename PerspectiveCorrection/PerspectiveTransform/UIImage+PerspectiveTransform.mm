@@ -24,8 +24,12 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
  *  @return image
  */
 - (UIImage *)getTransformImage {
-    SquarePoint square = [self getSquare];
-    return [self getTransformImageWithSquare:square];
+    SquarePoint square = SquarePointZero;
+    if ([self getSquare:&square]) {
+        return [self getTransformImageWithSquare:square];
+    } else {
+        return nil;
+    }
 }
 /**
  *  get perspective transformed image
@@ -64,22 +68,32 @@ static double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0);
     return dstImage;
 }
 /**
- *  get square points
+ *  get square in the image
  *
- *  @return SquarePoint
+ *  @param square
+ *
+ *  @return true:sucess false:not find square
  */
-- (SquarePoint)getSquare {
-    SquarePoint square = SquarePointZero;
+- (bool)getSquare:(SquarePoint *)square {
+    if (!square) {
+        return false;
+    }
+
+    *square = SquarePointZero;
     vector<vector<cv::Point>> squares;
 
     findSquares(self.CVMat, squares);
 
-    square.p0 = CGPointMake(squares[0][0].x, squares[0][0].y);
-    square.p1 = CGPointMake(squares[0][3].x, squares[0][3].y);
-    square.p2 = CGPointMake(squares[0][2].x, squares[0][2].y);
-    square.p3 = CGPointMake(squares[0][1].x, squares[0][1].y);
+    if (squares.size() > 0 && squares[0].size() > 3) {
+        square->p0 = CGPointMake(squares[0][0].x, squares[0][0].y);
+        square->p1 = CGPointMake(squares[0][3].x, squares[0][3].y);
+        square->p2 = CGPointMake(squares[0][2].x, squares[0][2].y);
+        square->p3 = CGPointMake(squares[0][1].x, squares[0][1].y);
 
-    return square;
+        return true;
+    } else {
+        return false;
+    }
 }
 
 @end
